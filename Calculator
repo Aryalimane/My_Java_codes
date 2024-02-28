@@ -1,0 +1,100 @@
+package com.project1.a;
+import java.util.Scanner;
+
+public class First {
+	
+	public void addition() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("How many numbers you want to add:");
+		int n=sc.nextInt();
+		int sum=0;
+		for (int i=1;i<=n;i++) {
+			
+			System.out.println("Enter"+i+" Numbers=");
+			int nos=sc.nextInt();
+			sum=sum+nos;
+			}
+		System.out.println("addition="+sum);
+	
+		
+	}
+	int sub;
+	public void subtraction() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("How many numbers you want to subtract:");
+		int n=sc.nextInt();
+		
+		for (int i=1;i<=n;i++) {
+			System.out.println("Enter"+i+" Numbers=");
+			int nos=sc.nextInt();
+			if(i==1) {
+				int d=2*nos;
+				sub=d-nos;
+				}
+			else {
+				sub=sub-nos;
+			
+			}}
+		System.out.println("sub="+sub);
+	
+}
+	float div;
+	public void division() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("How many numbers you want to divide:");
+		int n=sc.nextInt();
+		
+		for (int i=1;i<=n;i++) {
+			
+			System.out.println("Enter"+i+" Numbers=");
+			int nos=sc.nextInt();
+			if(i==1) {
+				int f=nos;
+				div=nos;}
+			else {	
+				div=div/nos;
+			}
+			}	
+		System.out.println("division="+div);}
+	
+	public void multiplication() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("How many numbers you want to multiply:");
+		int n=sc.nextInt();
+		int mul=1;
+		for (int i=1;i<=n;i++) {
+			
+			System.out.println("Enter"+i+" Numbers=");
+			int nos=sc.nextInt();
+			mul=mul*nos;
+			}
+		System.out.println("Multiplication="+mul);}
+		
+
+	public static void main(String[] args) {
+		System.out.println("1.Addition");
+		System.out.println("2.Sub");
+		System.out.println("3.Mul");
+		System.out.println("4.Div");
+		System.out.println("Choose from 1/2/3/4:"); 
+		Scanner sc= new Scanner(System.in);
+		int c=sc.nextInt();
+		First ft=new First();
+		switch (c) {
+		case 1:
+			ft.addition();
+			break;
+		case 2:
+			ft.subtraction();
+			break;
+		case 3:
+			ft.multiplication();
+			break;
+		case 4:
+			ft.division();
+			break;
+		default:
+			System.out.println("Invalid Operation");
+			
+		}
+		}}
